@@ -3,6 +3,12 @@
 Given a sorted array of integers a, find an integer x from a such that the value of
 
     abs(a[0] - x) + abs(a[1] - x) + ... + abs(a[a.length - 1] - x)
+
+        abs(2 - 2) + abs(4 - 2) + abs(7 - 2) = 7
+        abs(2 - 4) + abs(4 - 4) + abs(7 - 4) = 5
+        abs(2 - 7) + abs(4 - 7) + abs(7 - 7) = 8
+        
+
 is the smallest possible (here abs denotes the absolute value).
 If there are several possible answers, output the smallest one.
 
