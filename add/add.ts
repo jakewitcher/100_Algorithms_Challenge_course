@@ -3,9 +3,7 @@ function add(param1: number, param2: number): number {
 }
 
 function add2(...param1: number[]): number {
-    return param1.reduce((a, b) => {
-        return a + b;
-    });
+    return param1.reduce((a, b) => a + b);
 }
 
 console.log(add(1, 2)); // 3
