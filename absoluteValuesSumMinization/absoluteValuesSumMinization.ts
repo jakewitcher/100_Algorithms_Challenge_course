@@ -1,10 +1,10 @@
 function absoluteValuesSumMinimization(a: number[]): number {
     return a.reduce((x, y) => {
         const absSumX = a.reduce((b, c) => {
-            return (c > x) ? b + (c - x) : b + -(c - x);
+            return b + Math.abs(c - x);
         }, 0);
         const absSumY = a.reduce((d, e) => {
-            return (e > y) ? d + (e - y) : d + -(e - y);
+            return d + Math.abs(e - y);
         }, 0);
         if (absSumX <= absSumY) {
             return x;
