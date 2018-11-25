@@ -1,11 +1,11 @@
 function allLongestStrings(inputArray: string[]): string[] {
-    const longestString: string = inputArray.reduce((a, b) => {
+    const longestString: string = inputArray.reduce((a: string, b: string) => {
         if (a.length > b.length) {
             return a;
         }
         return b;
     });
-    return inputArray.filter((str) => str.length === longestString.length);
+    return inputArray.filter((str: string) => str.length === longestString.length);
 }
 
 console.log(allLongestStrings(["aba", "aa", "ad", "vcd", "aba"])); // [ "aba", "vcd", "aba"]

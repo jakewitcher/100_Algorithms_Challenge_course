@@ -1,9 +1,9 @@
 function adjacentElementsProduct(inputArray: number[]): number {
-    const productArray: number[] = inputArray.map((num, index) => {
+    const productArray: number[] = inputArray.map((num: number, index: number) => {
         if (index < inputArray.length - 1) {
             return num * inputArray[index + 1];
         }
-    }).filter((num) => num !== undefined);
+    }).filter((num: number) => num !== undefined);
     return Math.max(...productArray);
 }
 

@@ -1,9 +1,9 @@
 function absoluteValuesSumMinimization(a: number[]): number {
-    return a.reduce((x, y) => {
-        const absSumX = a.reduce((b, c) => {
+    return a.reduce((x: number, y: number) => {
+        const absSumX = a.reduce((b: number, c: number) => {
             return b + Math.abs(c - x);
         }, 0);
-        const absSumY = a.reduce((d, e) => {
+        const absSumY = a.reduce((d: number, e: number) => {
             return d + Math.abs(e - y);
         }, 0);
         if (absSumX <= absSumY) {
