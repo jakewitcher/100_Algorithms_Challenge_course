@@ -7,7 +7,7 @@ function almostIncreasingSequence(sequence: number[]): boolean {
         }
         return b;
     });
-    return count > 1 ? false : true;
+    return count <= 1;
 }
 
 console.log(almostIncreasingSequence([1, 3, 2, 1])); // false
