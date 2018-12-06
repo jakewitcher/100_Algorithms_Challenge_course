@@ -25,7 +25,7 @@ console.log(arrayChange([2, 1, 5])); // { array: [2, 3, 4], counter: 3}
 
 function arrayChange1(inputArray: number[]): object {
     let count: number = 0;
-    const changedArray = inputArray.reduce((a: number[], b: number) => {
+    const changedArray: number[] = inputArray.reduce((a: number[], b: number) => {
         const prevNum: number = a[a.length - 1];
         if (prevNum !== undefined && prevNum !== b - 1) {
             const newB: number = prevNum + 1;

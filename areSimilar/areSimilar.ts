@@ -3,10 +3,10 @@ function ascendingNums(x: number, y: number): number {
 }
 
 function arrayEquals(a: number[], b: number[]): boolean {
-    const sortedA = a.sort(ascendingNums);
-    const sortedB = b.sort(ascendingNums);
+    const sortedA: number[] = a.sort(ascendingNums);
+    const sortedB: number[] = b.sort(ascendingNums);
 
-    let counter = 0;
+    let counter: number = 0;
     for (let i = 0; i < a.length; i++) {
         if (sortedA[i] !== sortedB[i]) {
             counter++;
@@ -16,7 +16,7 @@ function arrayEquals(a: number[], b: number[]): boolean {
 }
 
 function swapOnce(a: number[], b: number[]): boolean {
-    let counter = 0;
+    let counter: number = 0;
     for (let i = 0; i < a.length; i++) {
         if (a[i] !== b[i]) {
             counter++;
