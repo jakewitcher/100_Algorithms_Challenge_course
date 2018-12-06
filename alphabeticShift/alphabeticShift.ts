@@ -13,7 +13,10 @@ function alphabeticShift1(inputString: string): string {
     return shift.reduce((a, b) => a + b, "");
 }
 
-function alphabeticShift2(inputString: string): string {
+console.log(alphabeticShift1("crazy")); // dsbaz
+console.log(alphabeticShift1("labradoodle")); // mbcsbeppemf
+
+function alphabeticShift(inputString: string): string {
     const wordArray: string[] = inputString.split("");
     const charCodeArray: number[] = wordArray.map((char) => {
         if (char === "z") {
@@ -25,8 +28,5 @@ function alphabeticShift2(inputString: string): string {
     return charCodeArray.map((c) => String.fromCharCode(c)).reduce((a, b) => a + b);
 }
 
-console.log(alphabeticShift1("crazy")); // dsbaz
-console.log(alphabeticShift1("labradoodle")); // mbcsbeppemf
-
-console.log(alphabeticShift2("crazy")); // dsbaz
-console.log(alphabeticShift2("labradoodle")); // mbcsbeppemf
+console.log(alphabeticShift("crazy")); // dsbaz
+console.log(alphabeticShift("labradoodle")); // mbcsbeppemf

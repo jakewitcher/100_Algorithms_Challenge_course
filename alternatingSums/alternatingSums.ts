@@ -24,3 +24,12 @@ function alternatingSums2(a: number[]): number[] {
 }
 
 console.log(alternatingSums2([50, 60, 60, 45, 70])); // [180, 105]
+
+// someone else's solution that I found to be really clever
+
+function alternatingSums3(a: number[]): number[] {
+    return a.reduce((acc: number[], val: number, i: number) => {
+        acc[i % 2] = acc[i % 2] + val;
+        return acc;
+    }, [0, 0]);
+}

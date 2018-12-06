@@ -42,6 +42,6 @@ function arrayConversion(inputArray: number[]): (number | string) {
     }
 }
 
-console.log(arrayConversion([1, 2, 3, 4, 5, 6, 7, 8]));
-console.log(arrayConversion([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]));
-console.log(arrayConversion([2, 4, 6, 8, 10, 12, 14]));
+console.log(arrayConversion([1, 2, 3, 4, 5, 6, 7, 8])); // 186
+console.log(arrayConversion([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])); // 1024
+console.log(arrayConversion([2, 4, 6, 8, 10, 12, 14])); // "Please enter an array length... etc"
