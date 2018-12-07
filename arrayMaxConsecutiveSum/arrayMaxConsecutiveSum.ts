@@ -1,5 +1,5 @@
 function sumOfConsecutives(arr: number[], num: number, index: number): number {
-    if (index + 1 >= num) {
+    if (index >= num) {
         return arr[index];
     }
     return arr[index] + sumOfConsecutives(arr, num, index + 1);
@@ -7,7 +7,7 @@ function sumOfConsecutives(arr: number[], num: number, index: number): number {
 
 function arrayMaxConsecutiveSum(inputArray: number[], k: number): number {
     return inputArray.reduce((maxSum: number, num: number, index: number) => {
-        const consecutiveSum = sumOfConsecutives(inputArray, k + index, index);
+        const consecutiveSum = sumOfConsecutives(inputArray, k - 1 + index, index);
         if (maxSum < consecutiveSum) {
             return consecutiveSum;
         }
